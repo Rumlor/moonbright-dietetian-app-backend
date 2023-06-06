@@ -1,0 +1,1 @@
+alter table file_doc modify content LONGBLOB not null

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="professionalPU" transaction-type="JTA">
+        <jta-data-source>jdbc/mysql_local</jta-data-source>
+        <class>com.moonbright.professionals.entity.ApplicationFileDoc</class>
+        <class>com.moonbright.infrastructure.persistence.entity.FileDoc</class>
+        <class>com.moonbright.infrastructure.persistence.entity.FormDoc</class>
+        <class>com.moonbright.infrastructure.persistence.entity.UserSettings</class>
+        <class>com.moonbright.infrastructure.persistence.entity.Appointment</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="INFO"/>
+        </properties>
+    </persistence-unit>
+</persistence>

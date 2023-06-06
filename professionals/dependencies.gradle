@@ -1,0 +1,19 @@
+dependencies {
+
+
+    implementation (project(path:':infrastructure'))
+
+
+
+
+    //lombok
+    compileOnly ('org.projectlombok:lombok:1.18.22')
+    testCompileOnly ('org.projectlombok:lombok:1.18.22')
+
+    annotationProcessor('org.projectlombok:lombok:1.18.22')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.22')
+    //
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}

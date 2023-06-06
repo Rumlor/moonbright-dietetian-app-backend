@@ -1,0 +1,18 @@
+
+test {
+    useJUnitPlatform()
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url = 'https://maven.pkg.github.com/daniel-schel/keycloak-admin-client-jersey'
+        credentials {
+            username ='Rumlor'
+            password = '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'
+        }
+    }
+}
+
+apply from: "dependencies.gradle"

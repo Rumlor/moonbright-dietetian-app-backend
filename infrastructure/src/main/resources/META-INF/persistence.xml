@@ -1,0 +1,10 @@
+<persistence>
+    <persistence-unit name="clientPU" transaction-type="JTA">
+        <jta-data-source>jdbc/mysql_local</jta-data-source>
+        <class>com.moonbright.infrastructure.persistence.entity.FileDoc</class>
+        <class>com.moonbright.infrastructure.persistence.entity.FormDoc</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="INFO"/>
+        </properties>
+    </persistence-unit>
+</persistence>
