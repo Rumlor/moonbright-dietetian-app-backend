@@ -69,9 +69,7 @@ public class ProfessionalAppointmentService extends AppService implements Appoin
                 .map(AppointmentMapper.INSTANCE::toAppointmentListingRecord).toList();
 
 
-        for( var usr : keycloakRestService.getRealmUserList(null,null)){
 
-        }
 
         return  null;
     }
