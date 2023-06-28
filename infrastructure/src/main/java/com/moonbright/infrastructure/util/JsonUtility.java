@@ -14,12 +14,12 @@ public class JsonUtility {
     }
 
     public  Jsonb getJsonb() {
-        return this.jsonb;
+        return jsonb;
     }
     @PreDestroy
     public void closeJsonb()  {
         try {
-            this.jsonb.close();
+            jsonb.close();
         }catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

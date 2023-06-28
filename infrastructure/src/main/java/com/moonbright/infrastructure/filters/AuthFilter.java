@@ -40,7 +40,7 @@ public class AuthFilter implements ContainerRequestFilter {
             }
             catch (VerificationException e) {
                 log.info(e.getMessage());
-                throwVerificationException(ErrorCodeAndDescription.CLIENT_TOKEN_VERIFICATION_FAILED_ERROR_CODE);
+                throwVerificationException();
             }
         }
     }
@@ -52,11 +52,11 @@ public class AuthFilter implements ContainerRequestFilter {
 
 
 
-    private static void throwVerificationException(ErrorCodeAndDescription e) {
+    private static void throwVerificationException() {
         throw new WebApplicationException(
                 Response
                         .status(401)
                         .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
-                        .entity(BaseErrorResponse.fromErrorCode(e)).build());
+                        .entity(BaseErrorResponse.fromErrorCode(ErrorCodeAndDescription.CLIENT_TOKEN_VERIFICATION_FAILED_ERROR_CODE)).build());
     }
 }
