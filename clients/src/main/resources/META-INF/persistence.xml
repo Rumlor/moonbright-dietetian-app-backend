@@ -1,6 +1,6 @@
 <persistence>
     <persistence-unit name="clientPU" transaction-type="JTA">
-        <jta-data-source>jdbc/mysql_local</jta-data-source>
+        <jta-data-source>mysql_local_resource</jta-data-source>
         <class>com.moonbright.clients.entity.MedicalHistory</class>
         <class>com.moonbright.infrastructure.persistence.entity.Appointment</class>
         <class>com.moonbright.infrastructure.persistence.entity.FileDoc</class>

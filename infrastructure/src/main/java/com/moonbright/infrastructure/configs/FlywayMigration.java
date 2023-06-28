@@ -15,7 +15,7 @@ import java.util.Objects;
 public class FlywayMigration {
 
     private Flyway flyway ;
-    @Resource(lookup = "jdbc/mysql_local")
+    @Resource(lookup = "mysql_local_resource")
     private DataSource dataSource;
 
 
