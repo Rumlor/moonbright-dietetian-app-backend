@@ -34,7 +34,6 @@ public class AppointmentClientServiceImpl extends AppService implements Appointm
 
     private final AppointmentForClientRepository appointmentForClientRepository;
     private final KeycloakRestService keycloakDefaultRestService;
-
     private final JsonUtility jsonUtility;
     @Resource
     private ManagedExecutorService managedExecutor;
