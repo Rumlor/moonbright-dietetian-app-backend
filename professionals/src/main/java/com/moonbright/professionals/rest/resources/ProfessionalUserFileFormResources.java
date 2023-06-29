@@ -14,7 +14,7 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 
 import java.util.concurrent.CompletionStage;
 
-@Path("/fifo")
+@Path("/pros/fifo")
 public class ProfessionalUserFileFormResources {
 
     @Inject

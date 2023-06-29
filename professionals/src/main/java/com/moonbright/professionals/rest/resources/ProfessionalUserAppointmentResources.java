@@ -9,7 +9,7 @@ import jakarta.ws.rs.*;
 
 import java.util.List;
 
-@Path("/appores")
+@Path("/pros/appores")
 public class ProfessionalUserAppointmentResources {
 
     private AppointmentProfessionalService appointmentService;

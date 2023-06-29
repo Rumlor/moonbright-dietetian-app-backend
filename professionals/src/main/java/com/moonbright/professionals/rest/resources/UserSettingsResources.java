@@ -1,4 +1,4 @@
-package com.moonbright.infrastructure.rest;
+package com.moonbright.professionals.rest.resources;
 
 import com.moonbright.infrastructure.record.UserSettingsRecord;
 import com.moonbright.infrastructure.service.UserSettingsService;
