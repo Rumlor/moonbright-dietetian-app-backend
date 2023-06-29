@@ -25,7 +25,7 @@ public class KeycloakDeploymentService {
 
     private void deploy(){
         adapterConfig = new AdapterConfig();
-        adapterConfig.setAuthServerUrl("http://localhost:8080/");
+        adapterConfig.setAuthServerUrl("http://localhost:8180/");
         adapterConfig.setRealm("moonbright");
         adapterConfig.setResource("moonbright-demo-client");
         adapterConfig.setPublicClient(true);

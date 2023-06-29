@@ -9,4 +9,5 @@ allprojects {
 
 subprojects {
     apply plugin : 'java-library'
+    apply plugin: 'war'
 }
