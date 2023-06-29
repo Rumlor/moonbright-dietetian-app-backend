@@ -41,9 +41,9 @@ public class DefaultTokenAuthService implements TokenAuthService{
     @Override
     public IntrospectionResultRecord authenticate(ContainerRequestContext requestContext) {
         IntrospectionResultRecord accessTokenResult = null;
-         String clientId = this.configStore.getProperty("client-id");
-         String clientSecret = this.configStore.getProperty("client-secret");
-         String introspectEndpoint = this.configStore.getProperty("introspect-endpoint");
+         String clientId = this.configStore.getProperty(ConfigStore.PropertyConstants.CLIENT_ID.getKey());
+         String clientSecret = this.configStore.getProperty(ConfigStore.PropertyConstants.CLIENT_SECRET.getKey());
+         String introspectEndpoint = this.configStore.getProperty(ConfigStore.PropertyConstants.INTROSPECT_API.getKey());
          String token = initialVerification(requestContext);
         try{
             var introspectionResponse = this.keycloakDeploymentService.getHttpClient().execute(createRequest(

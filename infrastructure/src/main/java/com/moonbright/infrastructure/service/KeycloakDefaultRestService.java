@@ -69,12 +69,12 @@ public class KeycloakDefaultRestService implements KeycloakRestService {
     }
 
     private HttpUriRequest createTokenRequest() throws UnsupportedEncodingException {
-        String user = this.configStore.getProperty("realm-admin-user");
-        String clientId = this.configStore.getProperty("client-admin-id");
-        String pass = this.configStore.getProperty("realm-admin-password");
+        String user = this.configStore.getProperty(ConfigStore.PropertyConstants.REALM_ADMIN.getKey());
+        String pass = this.configStore.getProperty(ConfigStore.PropertyConstants.REALM_ADMIN_PASS.getKey());
+        String clientId = this.configStore.getProperty(ConfigStore.PropertyConstants.CLIENT_ADMIN_ID.getKey());
         String realm = keycloakDeploymentService.getKeycloakDeployment().getRealm();
         String host = keycloakDeploymentService.getKeycloakDeployment().getAuthServerBaseUrl();
-        String tokenEndpoint = MessageFormat.format(this.configStore.getProperty("token-endpoint"),realm);
+        String tokenEndpoint = MessageFormat.format(this.configStore.getProperty(ConfigStore.PropertyConstants.TOKEN_API.getKey()),realm);
         var request = new HttpPost(host.concat(tokenEndpoint));
         List<NameValuePair> nameValuePairs = new ArrayList<>();
         nameValuePairs.add(new BasicNameValuePair("grant_type","password"));

@@ -15,6 +15,26 @@ import java.util.Properties;
 public class ConfigStore {
     private static final Log log = LogFactory.getLog(ConfigStore.class);
     private static Properties properties;
+    public enum PropertyConstants{
+        CLIENT_ID("client-id"),
+        CLIENT_SECRET("client-secret"),
+        CLIENT_ADMIN_ID("client-admin-id"),
+        INTROSPECT_API("introspect-endpoint"),
+        TOKEN_API("token-endpoint"),
+        USER_API("user-query-endpoint"),
+        REALM_ADMIN("realm-admin-user"),
+        REALM_ADMIN_PASS("realm-admin-password");
+
+        private String key;
+
+        public String getKey(){
+            return this.key;
+        }
+
+        PropertyConstants(String key) {
+            this.key = key;
+        }
+    }
 
     @PostConstruct
     public void readProperties() {
