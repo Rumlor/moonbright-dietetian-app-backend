@@ -72,7 +72,7 @@ public class KeycloakDefaultRestService implements KeycloakRestService {
         String user = this.configStore.getProperty(ConfigStore.PropertyConstants.REALM_ADMIN.getKey());
         String pass = this.configStore.getProperty(ConfigStore.PropertyConstants.REALM_ADMIN_PASS.getKey());
         String clientId = this.configStore.getProperty(ConfigStore.PropertyConstants.CLIENT_ADMIN_ID.getKey());
-        String realm = keycloakDeploymentService.getKeycloakDeployment().getRealm();
+        String realm = "master";
         String host = keycloakDeploymentService.getKeycloakDeployment().getAuthServerBaseUrl();
         String tokenEndpoint = MessageFormat.format(this.configStore.getProperty(ConfigStore.PropertyConstants.TOKEN_API.getKey()),realm);
         var request = new HttpPost(host.concat(tokenEndpoint));

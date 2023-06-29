@@ -19,11 +19,10 @@ public class ApplicationAccessTokenHolder {
 
     public ApplicationAccessTokenHolder(){}
 
-    public synchronized AccessToken getAccessToken() throws VerificationException {
+    public synchronized void getAccessToken() throws VerificationException {
         if (this.accessToken == null || this.accessToken.isExpired()){
             refreshAccessToken();
         }
-        return accessToken;
     }
 
     private synchronized void refreshAccessToken() throws VerificationException {
