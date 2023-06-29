@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/com.moonbright.moonbright.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/com.moonbright.moonbright.clients.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/com.moonbright.moonbright.infrastructure.main.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/com.moonbright.moonbright.infrastructure.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/moonbright.iml" filepath="$PROJECT_DIR$/.idea/modules/moonbright.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/moonbright.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/moonbright.clients.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/moonbright.infrastructure.main.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/moonbright.infrastructure.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/professionals/moonbright.professionals.main.iml" filepath="$PROJECT_DIR$/.idea/modules/professionals/moonbright.professionals.main.iml" />
