@@ -1,2 +1,2 @@
 rootProject.name = 'moonbright'
-include 'infrastructure','clients','professionals'
+include 'infrastructure','professionals'

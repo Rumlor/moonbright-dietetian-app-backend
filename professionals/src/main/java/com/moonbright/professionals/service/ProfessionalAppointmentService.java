@@ -16,7 +16,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Singleton
-public class ProfessionalAppointmentService extends AppService implements AppointmentService{
+public class ProfessionalAppointmentService extends AppService implements AppointmentProfessionalService{
 
     private final AppointmentForProfessionalRepository appointmentForProfessionalRepository;
     private final KeycloakRestService keycloakRestService;

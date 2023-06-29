@@ -1,9 +1,9 @@
-package com.moonbright.clients.rest.resources;
+package com.moonbright.professionals.rest.resources;
 
-import com.moonbright.clients.record.AppointmentCreateFileDocRecord;
-import com.moonbright.clients.record.AppointmentCreateRecord;
-import com.moonbright.clients.service.AppointmentService;
 import com.moonbright.infrastructure.service.serviceRequest.LightUserRepresentationList;
+import com.moonbright.professionals.record.AppointmentCreateFileDocRecord;
+import com.moonbright.professionals.record.AppointmentCreateRecord;
+import com.moonbright.professionals.service.AppointmentClientService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -19,10 +19,10 @@ import java.util.stream.Collectors;
 @Path("/appores")
 public class ClientUserAppointmentResources {
 
-    private final AppointmentService appointmentClientService;
+    private final AppointmentClientService appointmentClientService;
 
     @Inject
-    public ClientUserAppointmentResources(AppointmentService appointmentClientService) {
+    public ClientUserAppointmentResources(AppointmentClientService appointmentClientService) {
         this.appointmentClientService = appointmentClientService;
     }
 

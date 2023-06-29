@@ -1,4 +1,4 @@
-package com.moonbright.clients.repository;
+package com.moonbright.professionals.repository;
 
 import com.moonbright.infrastructure.persistence.entity.Appointment;
 import com.moonbright.infrastructure.persistence.entity.UserSettings;

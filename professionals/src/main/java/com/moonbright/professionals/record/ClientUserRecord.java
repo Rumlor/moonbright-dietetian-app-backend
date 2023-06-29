@@ -1,4 +1,4 @@
-package com.moonbright.clients.record;
+package com.moonbright.professionals.record;
 
 import com.moonbright.infrastructure.record.BaseUserRecord;
 

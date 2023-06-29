@@ -3,7 +3,7 @@ package com.moonbright.professionals.rest.resources;
 import com.moonbright.infrastructure.record.AppointmentListingRecord;
 import com.moonbright.professionals.record.DashboardInfoRecord;
 import com.moonbright.professionals.record.PreferencesRecord;
-import com.moonbright.professionals.service.AppointmentService;
+import com.moonbright.professionals.service.AppointmentProfessionalService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 
@@ -12,10 +12,10 @@ import java.util.List;
 @Path("/appores")
 public class ProfessionalUserAppointmentResources {
 
-    private AppointmentService appointmentService;
+    private AppointmentProfessionalService appointmentService;
 
     @Inject
-    public ProfessionalUserAppointmentResources(AppointmentService appointmentService){
+    public ProfessionalUserAppointmentResources(AppointmentProfessionalService appointmentService){
         this.appointmentService = appointmentService;
     }
 

@@ -1,6 +1,6 @@
-package com.moonbright.clients.entity;
+package com.moonbright.professionals.entity;
 
-import com.moonbright.clients.entity.utils.MedicalHistoryType;
+import com.moonbright.professionals.entity.utils.MedicalHistoryType;
 import com.moonbright.infrastructure.persistence.BaseEntity;
 import com.moonbright.infrastructure.persistence.entity.FileDoc;
 import com.moonbright.infrastructure.persistence.entity.FormDoc;

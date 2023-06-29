@@ -5,6 +5,8 @@
              version="3.0">
     <persistence-unit name="professionalPU" transaction-type="JTA">
         <jta-data-source>mysql_local_resource</jta-data-source>
+        <class>com.moonbright.professionals.entity.MedicalHistory</class>
+        <class>com.moonbright.infrastructure.persistence.entity.Appointment</class>
         <class>com.moonbright.professionals.entity.ApplicationFileDoc</class>
         <class>com.moonbright.infrastructure.persistence.entity.FileDoc</class>
         <class>com.moonbright.infrastructure.persistence.entity.FormDoc</class>

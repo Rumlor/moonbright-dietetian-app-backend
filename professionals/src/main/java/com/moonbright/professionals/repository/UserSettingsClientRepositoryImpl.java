@@ -1,4 +1,4 @@
-package com.moonbright.clients.repository;
+package com.moonbright.professionals.repository;
 
 import com.moonbright.infrastructure.persistence.entity.UserSettings;
 import com.moonbright.infrastructure.repository.UserSettingsRepository;
@@ -6,8 +6,8 @@ import jakarta.ejb.Singleton;
 
 import java.util.Optional;
 
-@Singleton(name = "clientRep")
-public class UserSettingsClientRepository extends BaseRepository implements UserSettingsRepository {
+@Singleton
+public class UserSettingsClientRepositoryImpl extends BaseRepository implements UserSettingsRepository {
 
     @Override
     public Optional<UserSettings> findUserSettings(String uid) {

@@ -1,20 +1,20 @@
-package com.moonbright.clients.service;
+package com.moonbright.professionals.service;
 
-import com.moonbright.clients.record.AppointmentCreateRecord;
-import com.moonbright.clients.repository.AppointmentForClientRepository;
+
 import com.moonbright.infrastructure.error.ErrorCodeAndDescription;
 import com.moonbright.infrastructure.error.exception.BaseErrorResponse;
 import com.moonbright.infrastructure.listeners.FileReaderSupplier;
 import com.moonbright.infrastructure.mapping.AppointmentMapper;
 import com.moonbright.infrastructure.persistence.entity.Appointment;
 import com.moonbright.infrastructure.persistence.entity.FileDoc;
-import com.moonbright.infrastructure.persistence.entity.utils.Status;
 import com.moonbright.infrastructure.record.AppointmentCreateRecordWithoutDocInfo;
 import com.moonbright.infrastructure.record.UserSettingsRelatedIdAndLocationRecord;
 import com.moonbright.infrastructure.service.AppService;
 import com.moonbright.infrastructure.service.KeycloakRestService;
 import com.moonbright.infrastructure.service.serviceRequest.LightUserRepresentationList;
 import com.moonbright.infrastructure.util.JsonUtility;
+import com.moonbright.professionals.record.AppointmentCreateRecord;
+import com.moonbright.professionals.repository.AppointmentForClientRepository;
 import jakarta.annotation.Resource;
 import jakarta.ejb.Singleton;
 import jakarta.enterprise.concurrent.ManagedExecutorService;
@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Singleton
-public class AppointmentClientService extends AppService implements AppointmentService {
+public class AppointmentClientServiceImpl extends AppService implements AppointmentClientService {
 
     private final AppointmentForClientRepository appointmentForClientRepository;
     private final KeycloakRestService keycloakDefaultRestService;
@@ -40,7 +40,7 @@ public class AppointmentClientService extends AppService implements AppointmentS
     private ManagedExecutorService managedExecutor;
 
     @Inject
-    public AppointmentClientService(AppointmentForClientRepository appointmentForClientRepository, KeycloakRestService keycloakDefaultRestService, JsonUtility jsonUtility){
+    public AppointmentClientServiceImpl(AppointmentForClientRepository appointmentForClientRepository, KeycloakRestService keycloakDefaultRestService, JsonUtility jsonUtility){
         this.appointmentForClientRepository = appointmentForClientRepository;
         this.keycloakDefaultRestService = keycloakDefaultRestService;
         this.jsonUtility = jsonUtility;

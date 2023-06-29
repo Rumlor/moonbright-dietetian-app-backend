@@ -6,10 +6,14 @@ import com.moonbright.professionals.record.PreferencesRecord;
 
 import java.util.List;
 
-public interface AppointmentService {
+public interface AppointmentProfessionalService {
     PreferencesRecord savePreferences(PreferencesRecord preferencesRecord);
+
     PreferencesRecord getPreferences();
+
     PreferencesRecord getPreferences(String uid);
-    List<AppointmentListingRecord> findAppointmentsByStatus(String  status);
+
+    List<AppointmentListingRecord> findAppointmentsByStatus(String status);
+
     DashboardInfoRecord getDashboardInfo();
 }
